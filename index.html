@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CryptoTrade</title>
+</head>
+<body>
+    <header>
+        <h1>CryptoTrade</h1>
+        <div id="auth">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button id="login-btn">Login</button>
+            <button id="logout-btn" style="display:none;">Logout</button>
+        </div>
+    </header>
+    <main>
+        <input type="text" id="search" placeholder="Search Cryptocurrency...">
+        <section id="crypto-list"></section>
+        <section id="order-entry" style="display:none;">
+            <h2>Place an Order</h2>
+            <form id="order-form">
+                <input type="text" id="crypto" placeholder="Cryptocurrency" required>
+                <input type="number" id="amount" placeholder="Amount" required>
+                <button type="submit">Submit Order</button>
+            </form>
+        </section>
+    </main>
+    <script src="js/main.js" type="module"></script>
+</body>
+</html>
