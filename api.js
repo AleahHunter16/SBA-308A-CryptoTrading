@@ -1,7 +1,7 @@
 // The api link for coinbase I got off of the example list from dog & cat website suppose try use fetch
 const API_URL = 'https://api-public.sandbox.exchange.coinbase.com';
-
-export const fetchCryptos = async () => {
+const api_key =
+exportconst fetchCryptos = async () => {
     try {
         const response = await fetch(`${API_URL}/products`);
         return await response.json();
