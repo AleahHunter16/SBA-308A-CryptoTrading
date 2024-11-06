@@ -2,12 +2,9 @@
 const fetch = require('node-fetch');
 const API_URL = 'https://api-public.sandbox.exchange.coinbase.com';
 // API
-const API_KEY = 'bd85fd1f-a101-4d95-9038-b9a3dbed7c6d';  
-const API_SECRET = `-----BEGIN EC PRIVATE KEY-----
-MHcCAQEEIBriaiIviaqv2DCk2pvyS/dlDQxRGhmJlNOErwErEbfHoAoGCCqGSM49
-AwEHoUQDQgAEb2U4ZP9IB9PBC3UBRILXnKrfHmVhQXKbFIFAkSoCvUwzH5uX957u
-1ZmPlSwrpyqs3X2LK+bRfWBKr8sarONh+A==
------END EC PRIVATE KEY-----`; //private key
+const API_KEY = process.env.COINBASE_API_KEY;
+const API_SECRET = process.env.COINBASE_API_SECRET;
+; //private key
 
 // list of crypto and trading pairs
 export const fetchCryptos = async () => {
