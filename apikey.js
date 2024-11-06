@@ -28,7 +28,7 @@ const generateSignature = (method, path, body = '', secret) => {
     const timestamp = Date.now() / 1000;
     const bodyString = body || '';
     const message = timestamp + method + path + bodyString;
-    
+
     const hmac = require('crypto').createHmac('sha256', secret);
     return hmac.update(message).digest('base64');
 };
